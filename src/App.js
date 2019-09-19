@@ -11,7 +11,7 @@ class App extends Component{
     return (
       <div className="App">
         {
-          <WordCard value="Macxiiz"/>
+          <WordCard value="Ma"/>
           // Array.from(word).map(
           //   (c,i) => <CharacterCard value={c} key={i}/>
           // )
