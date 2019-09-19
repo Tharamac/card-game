@@ -39,7 +39,7 @@ export default class WordCard extends Component{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
                 document.getElementById('nod').innerHTML = `Attempt: ${this.state.attempt} `
             }
-           // componentDidUpdate(this.state)
+           //TODO:: clear this line!
         }
         //console.log(this.state)
         
@@ -51,7 +51,7 @@ export default class WordCard extends Component{
             <div>
                 {
                     Array.from(this.props.value).map(
-                        (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler}/>
+                        (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} {...this.state}/>
                     )
                 }
             </div>
