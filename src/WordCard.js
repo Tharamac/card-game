@@ -25,17 +25,19 @@ export default class WordCard extends Component{
     }
     
     activationHandler = (c) =>{
-        let guess = [...this.state.guess, c]
+        let guess = [...this.state.guess, c.toUpperCase()]
         this.setState({guess})
         if(guess.length == this.state.chars.length){
             if(guess.join('').toString() == this.state.word){
                 this.setState({guess: [], complete: true})
+                document.getElementById('nod').innerHTML = `Congratulations!`
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
+                document.getElementById('nod').innerHTML = `Attempt: ${this.state.attempt} `
             }
         }
         //console.log(this.props.value)
-        document.getElementById('nod').innerHTML = `The ${c} has been activated.`
+        
     }
     
 
