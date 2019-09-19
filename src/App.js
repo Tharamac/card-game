@@ -11,11 +11,13 @@ class App extends Component{
     return (
       <div className="App">
         {
-          <WordCard value="hello"/>
+          <WordCard value="Macxiiz"/>
           // Array.from(word).map(
           //   (c,i) => <CharacterCard value={c} key={i}/>
           // )
+          
         }
+        <h2 id="nod">Hello World!</h2>
       </div>
     );
   }
