@@ -2,17 +2,23 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CharacterCard from './CharacterCard';
+import WordCard from './WordClass';
+
+const word = "Hello";
 
 class App extends Component{
   render() {
     return (
       <div className="App">
-        <CharacterCard value="h"/>
-        <CharacterCard value="i"/>
+        {
+          <WordCard value="hello"/>
+          // Array.from(word).map(
+          //   (c,i) => <CharacterCard value={c} key={i}/>
+          // )
+        }
       </div>
     );
   }
 }
-
 
 export default App;
