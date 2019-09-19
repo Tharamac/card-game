@@ -41,3 +41,8 @@
   margin: 1em;
   user-select:none;
 }
+
+.activeCard{
+  color: purple;
+  background: plum;
+}
