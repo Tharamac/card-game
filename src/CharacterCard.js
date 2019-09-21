@@ -12,8 +12,7 @@ export default class CharacterCard extends Component {
         // console.log(prevProps)
         // console.log(this.props)
         if(prevProps.attempt != this.props.attempt){
-            this.setState({active :false})
-            
+           setTimeout(() => this.setState({active :false}),500) 
         }
 
     }

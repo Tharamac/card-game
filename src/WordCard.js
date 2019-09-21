@@ -24,6 +24,10 @@ export default class WordCard extends Component{
         this.state = prepareStateFromWord(this.props.value)
     }
     
+    getAnswer = () => {
+        this.props.getAnswer(this.state.chars.join('').toString());
+    }
+
     activationHandler = (c) =>{
         let guess = [...this.state.guess, c.toUpperCase()]
         this.setState({guess})
@@ -34,10 +38,12 @@ export default class WordCard extends Component{
             console.log(this.state.chars.join('').toString())
             if(guess.join('').toString() == this.state.chars.join('').toString()){
                 this.setState({guess: [], complete: true})
-                document.getElementById('nod').innerHTML = `Congratulations!`
+                document.getElementById('complete').innerHTML = `Congratulations!`
+                
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
                 document.getElementById('nod').innerHTML = `Attempt : ${this.state.attempt} `
+      
             }
            //TODO:: clear this line!
         }
@@ -45,7 +51,6 @@ export default class WordCard extends Component{
          
 
     }
-    
 
     render(){
         return(

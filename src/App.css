@@ -53,6 +53,10 @@
 
 #nod{
   color: brown ; 
+  font-size: 1.5em;
+}
+#complete{
+  color: brown ; 
   font-size: 2.5em;
 }
 
@@ -61,11 +65,16 @@
 }
 
 #newgame{
+  display: none;
+}
+
+.button{
   text-align: center;
   display: inline-block;
   font-size: 2em;
   background-color: tan;
   border: none; 
-  border-radius: 10px;
+  margin-left: 10px;
   font-family:'Raleway', 'sans-serif'; 
+  border-radius: 10px;
 }
