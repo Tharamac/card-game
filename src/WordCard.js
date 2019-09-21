@@ -58,9 +58,11 @@ export default class WordCard extends Component{
 
 
     activationHandler = (c) =>{
-        this.forceUpdate();
-       
         let guess = [...this.state.guess, c.toUpperCase()]
+        if(guess.length == 1){
+            document.getElementById('your-answer').innerHTML = `Your Answer : ${c.toUpperCase()}` 
+        }else
+            document.getElementById('your-answer').innerHTML += c.toUpperCase();
         this.setState({guess})
         if(guess.length == this.state.chars.length){
             // console.log(guess.join('').toString())
@@ -72,26 +74,24 @@ export default class WordCard extends Component{
                 document.getElementById('surrender').style.display = "none";
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
-                document.getElementById('nod').innerHTML = `Attempt : ${this.state.attempt} `
-      
+                document.getElementById('nod').innerHTML = `Attempt : ${this.state.attempt}`  
             }
            //TODO:: clear this line!
-        }
+        }else
+            document.getElementById('your-answer').innerHTML += " -> ";
         //console.log(this.state)
-         
-
     }
+
+
 
     render(){
         if(this.props.isSurrenderConfirm){
-            this.props.getAnswer(this.state.chars.join(''))
-
+            this.props.getAnswer(this.state.chars.join(' -> '))
         }
         return(
             
             <div>
                 {
-                    
                     Array.from(word).map(
                         (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} isSurrenderConfirm={this.props.isSurrenderConfirm} {...this.state}/>
                     )

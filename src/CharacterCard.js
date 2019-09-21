@@ -12,13 +12,12 @@ export default class CharacterCard extends Component {
         // console.log(prevProps)
         // console.log(this.props)
         if(prevProps.attempt != this.props.attempt){
-           setTimeout(() => this.setState({active :false}),500) 
+           setTimeout(() => { this.setState({active :false})},500)            
         }
 
     }
 
     activate = () => {
-        
         if(!this.props.isSurrenderConfirm){
             if(!this.state.active){
                 this.props.activationHandler(this.props.value)
@@ -33,7 +32,6 @@ export default class CharacterCard extends Component {
 
     render(){
         let className = `card ${this.state.active ? 'activeCard' : ''}`
-        
         return(
                 <div className={className} onClick={this.activate} >
                     {this.props.value}

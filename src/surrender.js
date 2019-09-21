@@ -4,15 +4,11 @@ import React, { Component } from 'react'
 
 class Surrender extends Component {
    
- 
-
     surrender = () => {
             document.getElementById('newgame').style.display = "inline-block";
             document.getElementById('surrender').style.display = "none";
             this.props.getSurrender(true);
-     }
-    
-   
+    }
 
   render() {
     return (

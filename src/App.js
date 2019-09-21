@@ -37,7 +37,7 @@ class App extends Component{
       this.setState({difficulty: 'hard'})
     }
     // this.forceUpdate();
-
+    
     document.getElementById('maingame').style.display = 'block';
     document.getElementById('btn-group').style.display = 'none';
   }
@@ -58,6 +58,7 @@ class App extends Component{
     return (
       <div className="App">
         <h1 id="welcome">Welcome to ReactCardGame!</h1>
+       
         <div id="maingame">
           <h1 id="info">Try to order this word!</h1>
             <div id="wordcard">
@@ -68,16 +69,19 @@ class App extends Component{
             // )
             }
             </div>
+            <h2 id="your-answer"></h2>
             <h1 id="complete"></h1>
             <h1 id="nod">Attempt : 0</h1>
             {
               <Surrender getSurrender={this.getSurrender}/>
             }
+       
         </div>
        <div id="btn-group">
-        <button id="easy" className="newgame button" onClick={this.handleDifficulty}>EASY</button>
-        <button id="medium" className="newgame button" onClick={this.handleDifficulty}>MEDIUM</button>
-        <button id="hard"className="newgame button" onClick={this.handleDifficulty}>HARD</button>
+          <h2 id="choosediff">Choose your difficulty...</h2>
+          <button id="easy" className="newgame button" onClick={this.handleDifficulty}>EASY</button>
+          <button id="medium" className="newgame button" onClick={this.handleDifficulty}>MEDIUM</button>
+          <button id="hard"className="newgame button" onClick={this.handleDifficulty}>HARD</button>
         </div>
 
         <button id="newgame" className="button" onClick={this.newgame}>NEW GAME</button>
