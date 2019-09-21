@@ -5,13 +5,7 @@ import CharacterCard from './CharacterCard';
 import WordCard from './WordCard';
 import Surrender from './surrender';
 
-const easy_word = ['ape', 'cat' , 'eat' , 'zip' , 'wet' , 'dry' , 'poll'];
-const medium_word = ['Hello', 'Green' , 'Black' , 'Pearl' , 'Dense' , 'sharp' , 'clone'];
-const hard_word = ['bottle', 'activate' , 'extend' , 'vertical' , 'charged' , 'mindset' , 'setting'];
-var easy_item = easy_word[Math.floor(Math.random()*easy_word.length)];
-var medium_item = medium_word[Math.floor(Math.random()*medium_word.length)];
-var hard_item = hard_word[Math.floor(Math.random()*hard_word.length)];
-var difficulty = easy_item.toUpperCase();
+
 class App extends Component{
 
   constructor() {
