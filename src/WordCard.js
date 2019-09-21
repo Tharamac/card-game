@@ -39,7 +39,8 @@ export default class WordCard extends Component{
             if(guess.join('').toString() == this.state.chars.join('').toString()){
                 this.setState({guess: [], complete: true})
                 document.getElementById('complete').innerHTML = `Congratulations!`
-                
+                document.getElementById('newgame').style.display = "inline-block";
+                document.getElementById('surrender').style.display = "none";
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
                 document.getElementById('nod').innerHTML = `Attempt : ${this.state.attempt} `

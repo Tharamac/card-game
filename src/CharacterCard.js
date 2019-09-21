@@ -34,10 +34,7 @@ export default class CharacterCard extends Component {
 
     render(){
         let className = `card ${this.state.active ? 'activeCard' : ''}`
-        if(this.props.isSurrenderConfirm){
-            className = 'card activeCard'
-            document.getElementsByClassName("card").disabled = true;
-        }
+        
         return(
                 <div className={className} onClick={this.activate} >
                     {this.props.value}
