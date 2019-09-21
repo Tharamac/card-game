@@ -3,10 +3,7 @@ import React, { Component } from 'react'
 
 
 class Surrender extends Component {
-    constructor(props){
-        super(props)
-       
-    }
+   
  
 
     surrender = () => {

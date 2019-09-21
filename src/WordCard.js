@@ -28,12 +28,9 @@ export default class WordCard extends Component{
 
     constructor(props){
         super(props)
-        let difficulty = props.value;
         console.log(props.value)
-        this.state = prepareStateFromWord(word)
-            
-    
-        console.log(props.isSurrenderConfirm);
+       this.state = prepareStateFromWord(word)
+      //  console.log(props.isSurrenderConfirm);
       
     }
     
@@ -45,13 +42,19 @@ export default class WordCard extends Component{
             word = medium_item.toUpperCase();
         else if(difficulty == 'hard')
             word = hard_item.toUpperCase();
-        }
+        this.forceUpdate();
+        this.state = prepareStateFromWord(word)
+        console.log(this.state)
+    }
+    componentDidUpdate(prevProps,prevState){
+        console.log(this.state)
+    }
 
     activationHandler = (c) =>{
+        this.forceUpdate();
+        console.log(this.state)
         let guess = [...this.state.guess, c.toUpperCase()]
         this.setState({guess})
-
-      
         if(guess.length == this.state.chars.length){
             console.log(guess.join('').toString())
             console.log(this.state.chars.join('').toString())

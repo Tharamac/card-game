@@ -58,16 +58,20 @@
 #complete{
   color: brown ; 
   font-size: 2.5em;
+  margin-bottom: 0;
+
 }
 
-#welcome{
+#info,#welcome{
   font-size: 3em;
 }
 
 #newgame{
   display: none;
 }
-
+#maingame{
+  display: none;
+}
 
 #surrender{
   display: inline-block;
@@ -78,7 +82,7 @@
   font-size: 2em;
   background-color: tan;
   border: none; 
-  margin-left: 10px;
+  margin-left: 25px;
   font-family:'Raleway', 'sans-serif'; 
   border-radius: 10px;
 }
