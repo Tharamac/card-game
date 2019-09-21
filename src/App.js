@@ -36,7 +36,7 @@ class App extends Component{
         <h1 id="complete"></h1>
         <h1 id="nod">Attempt : 0</h1>
         {
-          <Surrender></Surrender>
+          <Surrender getAnswer={this.getAnswer}/>
         }
        
         <button id="newgame" class="button" onClick={this.newgame}>NEW GAME</button>

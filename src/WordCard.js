@@ -24,9 +24,9 @@ export default class WordCard extends Component{
         this.state = prepareStateFromWord(this.props.value)
     }
     
-    getAnswer = () => {
-        this.props.getAnswer(this.state.chars.join('').toString());
-    }
+    // getAnswer = () => {
+    //     this.props.getAnswer(this.state.chars.join('').toString());
+    // }
 
     activationHandler = (c) =>{
         let guess = [...this.state.guess, c.toUpperCase()]
