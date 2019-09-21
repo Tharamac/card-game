@@ -22,11 +22,11 @@ export default class WordCard extends Component{
     constructor(props){
         super(props)
         this.state = prepareStateFromWord(this.props.value)
+        console.log(props.isSurrenderConfirm);
+      
     }
     
-    // getAnswer = () => {
-    //     this.props.getAnswer(this.state.chars.join('').toString());
-    // }
+    
 
     activationHandler = (c) =>{
         let guess = [...this.state.guess, c.toUpperCase()]
@@ -53,6 +53,9 @@ export default class WordCard extends Component{
     }
 
     render(){
+        if(this.props.isSurrenderConfirm){
+            this.props.getAnswer(this.state.chars.join(''))
+        }
         return(
             <div>
                 {
