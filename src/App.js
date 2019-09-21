@@ -25,7 +25,7 @@ class App extends Component{
 
   handleDifficulty = (e) => {
     let difficulty = e.target.id;
-    console.log(e.target.id)
+    // console.log(e.target.id)
     if(difficulty == 'easy'){
       this.setDifficulty.current.setDifficulty('easy');
       this.setState({difficulty: 'easy'})
