@@ -18,11 +18,14 @@ export default class CharacterCard extends Component {
     }
 
     activate = () => {
-        if(!this.state.active){
-            this.props.activationHandler(this.props.value)
-            console.log(this.props.value)
-            this.setState({active : true})
-            
+        
+        if(!this.props.isSurrenderConfirm){
+            if(!this.state.active){
+                this.props.activationHandler(this.props.value)
+                console.log(this.props.value)
+                this.setState({active : true})
+                
+            }
         }
         // else{
         //     this.setState({active : false})
@@ -31,11 +34,16 @@ export default class CharacterCard extends Component {
 
     render(){
         let className = `card ${this.state.active ? 'activeCard' : ''}`
-       return(
-            <div className={className} onClick={this.activate} >
-                {this.props.value}
-            </div>
-        );
+        if(this.props.isSurrenderConfirm){
+            className = 'card activeCard'
+            document.getElementsByClassName("card").disabled = true;
+        }
+        return(
+                <div className={className} onClick={this.activate} >
+                    {this.props.value}
+                </div>
+            );
+            
     }
 }
 
