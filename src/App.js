@@ -33,17 +33,15 @@ class App extends Component{
 
   easy = () => {
     this.setDifficulty.current.setDifficulty('easy');
-      this.setState({difficulty:'easy'})
+  
   }
   medium = () => {
     this.setDifficulty.current.setDifficulty('medium');
-    this.setState({difficulty:'medium'})
-    difficulty = medium_item.toUpperCase();
+   
   }
   hard = () => {
     this.setDifficulty.current.setDifficulty('hard');
-    this.setState({difficulty:'hard'})
-    difficulty = hard_item.toUpperCase();
+    
   }
   
   getSurrender = (isSurrender) =>{

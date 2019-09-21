@@ -43,7 +43,9 @@ export default class WordCard extends Component{
             word = easy_item.toUpperCase();
         else if(difficulty == 'medium')
             word = medium_item.toUpperCase();
-    }
+        else if(difficulty == 'hard')
+            word = hard_item.toUpperCase();
+        }
 
     activationHandler = (c) =>{
         let guess = [...this.state.guess, c.toUpperCase()]
