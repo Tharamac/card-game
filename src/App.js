@@ -32,16 +32,17 @@ class App extends Component{
     }else if(difficulty == 'medium'){
       this.setDifficulty.current.setDifficulty('medium');
       this.setState({difficulty: 'medium'})
-    }else if(difficulty == 'hard')
+    }else if(difficulty == 'hard'){
       this.setDifficulty.current.setDifficulty('hard');
       this.setState({difficulty: 'hard'})
-    
+    }
+    // this.forceUpdate();
+
     document.getElementById('maingame').style.display = 'block';
     document.getElementById('btn-group').style.display = 'none';
   }
 
-  
-  
+
   getSurrender = (isSurrender) =>{
     if(isSurrender){
       this.setState({isSurrenderConfirm:true});

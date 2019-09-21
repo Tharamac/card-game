@@ -28,9 +28,9 @@ export default class WordCard extends Component{
 
     constructor(props){
         super(props)
-        console.log(props.value)
+        // console.log(props.value)
        this.state = prepareStateFromWord(word)
-      //  console.log(props.isSurrenderConfirm);
+    //    console.log(this.state.word);
       
     }
     
@@ -42,22 +42,22 @@ export default class WordCard extends Component{
             word = medium_item.toUpperCase();
         else if(difficulty == 'hard')
             word = hard_item.toUpperCase();
-        this.forceUpdate();
-        this.state = prepareStateFromWord(word)
-        console.log(this.state)
+        this.setState({
+            word : word,
+            chars : _.shuffle(Array.from(word))
+        })
+
     }
-    componentDidUpdate(prevProps,prevState){
-        console.log(this.state)
-    }
+
 
     activationHandler = (c) =>{
         this.forceUpdate();
-        console.log(this.state)
+       
         let guess = [...this.state.guess, c.toUpperCase()]
         this.setState({guess})
         if(guess.length == this.state.chars.length){
-            console.log(guess.join('').toString())
-            console.log(this.state.chars.join('').toString())
+            // console.log(guess.join('').toString())
+            // console.log(this.state.chars.join('').toString())
             if(guess.join('').toString() == this.state.chars.join('').toString()){
                 this.setState({guess: [], complete: true})
                 document.getElementById('complete').innerHTML = `Congratulations!`
@@ -84,6 +84,7 @@ export default class WordCard extends Component{
             
             <div>
                 {
+                    
                     Array.from(word).map(
                         (c,i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} isSurrenderConfirm={this.props.isSurrenderConfirm} {...this.state}/>
                     )
