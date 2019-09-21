@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Schoolbell', cursive;
+  
 }
 
 .App-logo {
@@ -35,11 +37,13 @@
 .card{
   display: inline-block;
   text-align: center;
-  width: 3em;
-  font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: 1em;
+  width: 2em;
+  font-size: 3em;
+  padding: auto;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  margin: 30px;
   user-select:none;
+  font-family:'Raleway', 'sans-serif'; 
 }
 
 .activeCard{
@@ -49,4 +53,19 @@
 
 #nod{
   color: brown ; 
+  font-size: 2.5em;
+}
+
+#welcome{
+  font-size: 3em;
+}
+
+#newgame{
+  text-align: center;
+  display: inline-block;
+  font-size: 2em;
+  background-color: tan;
+  border: none; 
+  border-radius: 10px;
+  font-family:'Raleway', 'sans-serif'; 
 }

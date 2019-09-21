@@ -37,13 +37,13 @@ export default class WordCard extends Component{
                 document.getElementById('nod').innerHTML = `Congratulations!`
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
-                document.getElementById('nod').innerHTML = `Attempt: ${this.state.attempt} `
+                document.getElementById('nod').innerHTML = `Attempt : ${this.state.attempt} `
             }
            //TODO:: clear this line!
         }
         //console.log(this.state)
          
-        
+
     }
     
 
