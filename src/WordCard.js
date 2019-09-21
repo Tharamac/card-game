@@ -3,9 +3,16 @@ import CharacterCard from "./CharacterCard";
 import _ from 'lodash';
 import { thisTypeAnnotation } from '@babel/types';
 
-const easy_word = ['ape', 'cat' , 'eat' , 'zip' , 'wet' , 'dry' , 'poll'];
-const medium_word = ['Hello', 'Green' , 'Black' , 'Pearl' , 'Dense' , 'sharp' , 'clone'];
-const hard_word = ['bottle', 'activate' , 'extend' , 'vertical' , 'charged' , 'mindset' , 'setting'];
+const easy_word = [
+    'ape', 'cat' , 'eat' , 'zip' , 'wet' , 'dry' , 'poll', 'pot' , 'run' , 'fun', 'git' , 'bad'
+];
+const medium_word = [
+    'Hello', 'Green' , 'Black' , 'Pearl' , 'Dense' , 'sharp' , 'clone', 'clear' ,'steel' , 'stool' ,'chair' ,'never'
+];
+const hard_word = [
+    'bottle', 'activate' , 'extend' , 'vertical' , 'charged' , 'mindset' , 'setting',
+    'function' , 'require' , 'design' , 'resolution' , 'statistic'
+];
 var easy_item = easy_word[Math.floor(Math.random()*easy_word.length)];
 var medium_item = medium_word[Math.floor(Math.random()*medium_word.length)];
 var hard_item = hard_word[Math.floor(Math.random()*hard_word.length)];
