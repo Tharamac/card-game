@@ -10,7 +10,7 @@ class Surrender extends Component {
  
 
     surrender = () => {
-            document.getElementById('newgame').style.display = "inline-block";
+            document.getElementById('newgame').style.display = "block";
             document.getElementById('surrender').style.display = "none";
             this.props.getSurrender(true);
      }
