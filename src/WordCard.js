@@ -42,6 +42,7 @@ export default class WordCard extends Component{
            //TODO:: clear this line!
         }
         //console.log(this.state)
+         
         
     }
     

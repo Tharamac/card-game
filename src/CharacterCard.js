@@ -9,7 +9,7 @@ export default class CharacterCard extends Component {
     }
 
     componentDidUpdate(prevProps){
-        //console.log(prevProps)
+        // console.log(prevProps)
         // console.log(this.props)
         if(prevProps.attempt != this.props.attempt){
             this.setState({active :false})

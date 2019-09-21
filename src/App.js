@@ -4,7 +4,8 @@ import './App.css';
 import CharacterCard from './CharacterCard';
 import WordCard from './WordCard';
 
-const word = "Hello";
+const word = ['Hello', 'Green'];
+var item = word[Math.floor(Math.random()*word.length)];
 
 class App extends Component{
   render() {
@@ -12,7 +13,7 @@ class App extends Component{
       <div className="App">
         {
           
-          <WordCard value="Ma"/>
+          <WordCard value={item.toUpperCase()}/>
           // Array.from(word).map(
           //   (c,i) => <CharacterCard value={c} key={i}/>
           // )
